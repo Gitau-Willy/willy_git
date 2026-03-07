@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gitau Wilson Njoroge · Investigator & Forensic Specialist</title>
+  <!-- Google Font & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #f0f4f8;
+      color: #0a1e2c;
+      line-height: 1.5;
+    }
+
+    /* navigation */
+    .navbar {
+      background: #0b2b40;
+      color: white;
+      padding: 0.8rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 8px 20px rgba(0,20,30,0.2);
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: white;
+      text-decoration: none;
+      background: #1f4b66;
+      padding: 0.3rem 1.2rem 0.3rem 0.6rem;
+      border-radius: 40px;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #cbdbe9;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    .nav-item a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      color: #e0edf5;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 40px;
+      transition: 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .nav-item a:hover, .nav-item.active a {
+      background: #2b6c8f;
+      color: white;
+    }
+
+    /* main container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 1rem;
+    }
+
+    /* hero section */
+    .hero {
+      background: white;
+      border-radius: 32px;
+      padding: 2.5rem 3rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 12px 30px -10px rgba(0,40,60,0.2);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #0b2b40;
+      line-height: 1.1;
+    }
+
+    .hero-text .subhead {
+      font-size: 1.2rem;
+      color: #2b6c8f;
+      margin: 0.5rem 0 1rem;
+      border-left: 5px solid #2b6c8f;
+      padding-left: 1.2rem;
+    }
+
+    .hero-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      background: #ecf3f8;
+      padding: 1rem 2rem;
+      border-radius: 60px;
+      margin-top: 1rem;
+    }
+
+    .hero-contact span {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .hero-contact i {
+      color: #0b2b40;
+      width: 1.2rem;
+    }
+
+    .hero-image img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2b6c8f;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      background: white;
+    }
+
+    /* section styling */
+    .section-card {
+      background: white;
+      border-radius: 32px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 20px -8px rgba(0,30,40,0.15);
+      scroll-margin-top: 80px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #0b2b40;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.8rem;
+      border-bottom: 3px solid #e2e8f0;
+      padding-bottom: 0.7rem;
+    }
+
+    .section-title i {
+      color: #2b6c8f;
+      font-size: 1.8rem;
+    }
+
+    /* profile summary */
+    .profile-summary {
+      background: #f8fafc;
+      padding: 1.5rem 2rem;
+      border-radius: 24px;
+      border-left: 6px solid #2b6c8f;
+      font-size: 1.05rem;
+    }
+
+    /* experience timeline */
+    .exp-item {
+      margin-bottom: 2rem;
+    }
+
+    .exp-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #0f2c3d;
+    }
+
+    .exp-place {
+      font-weight: 500;
+      color: #2b6c8f;
+    }
+
+    .exp-date {
+      background: #e1ecf3;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      margin-top: 0.8rem;
+    }
+
+    .exp-bullets li {
+      display: flex;
+      gap: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-bullets i {
+      color: #2b6c8f;
+      margin-top: 0.2rem;
+      min-width: 1.2rem;
+    }
+
+    /* grids for credentials */
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .cred-item {
+      background: #f2f7fc;
+      padding: 0.8rem 1.2rem;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 500;
+    }
+
+    .cred-item i {
+      color: #1f4b66;
+      font-size: 1.1rem;
+    }
+
+    .training-badge {
+      background: #e0eef9;
+      border-radius: 40px;
+      padding: 0.8rem 1.5rem;
+      margin-top: 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      font-style: italic;
+    }
+
+    /* third image styling (badge) */
+    .badge-image {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0 0.5rem;
+    }
+    .badge-image img {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 3px solid #2b6c8f;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* skills chips */
+    .skills-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .skill-chip {
+      background: #ecf3f8;
+      border: 1px solid #c0d6e5;
+      padding: 0.5rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 500;
+      transition: 0.15s;
+    }
+
+    .skill-chip:hover {
+      background: #d0e2f0;
+      border-color: #2b6c8f;
+    }
+
+    /* language & interests row */
+    .lang-interests {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .info-box p {
+      margin: 0.5rem 0;
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .interest-tag {
+      background: #ecf3f8;
+      padding: 0.4rem 1.3rem;
+      border-radius: 40px;
+      display: inline-block;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* contact section */
+    .contact-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .contact-details {
+      flex: 2;
+    }
+
+    .contact-details p {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      color: #0b2b40;
+      background: #ecf3f8;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+      display: inline-block;
+      margin-right: 0.8rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .social-links a:hover {
+      background: #d0e2f0;
+    }
+
+    .contact-form {
+      flex: 2;
+      background: #f8fafc;
+      padding: 1.5rem;
+      border-radius: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1.2rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 30px;
+      font-family: inherit;
+    }
+
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .btn {
+      background: #0b2b40;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #1f4b66;
+    }
+
+    /* footer */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: #4f6f87;
+      border-top: 1px solid #d9e2ec;
+      margin-top: 2rem;
+    }
+
+    /* responsive */
+    @media (max-width: 800px) {
+      .navbar { flex-direction: column; gap: 0.8rem; }
+      .hero { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+      .hero-contact { justify-content: center; }
+      .lang-interests { grid-template-columns: 1fr; }
+      .contact-flex { flex-direction: column; }
+      .section-card { padding: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky Navigation with first image (logo.jpeg) -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#home">
+        <!-- Image 1: logo.jpeg (small circle) -->
+        <img src="images/logo.jpeg" alt="Gitau Wilson logo" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=GW&size=40&background=2b6c8f&color=fff&rounded=true';">
+        GWN
+      </a>
+    </div>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#home">Home</a></li>
+      <li class="nav-item"><a href="#about">About</a></li>
+      <li class="nav-item"><a href="#experience">Experience</a></li>
+      <li class="nav-item"><a href="#credentials">Credentials</a></li>
+      <li class="nav-item"><a href="#skills">Skills</a></li>
+      <li class="nav-item"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <!-- HOME section with second image (profile.jpeg) -->
+    <section id="home" class="hero section-card" style="margin-bottom:2rem; scroll-margin-top: 90px;">
+      <div class="hero-text">
+        <h1>Gitau Wilson Njoroge</h1>
+        <div class="subhead">Crime Investigator · Forensic Specialist · EMT</div>
+        <div class="hero-contact">
+          <span><i class="fas fa-map-pin"></i> Nairobi, Kenya</span>
+          <span><i class="fas fa-phone-alt"></i> +254 727 345148</span>
+          <span><i class="fas fa-envelope"></i> wilsongitau100@gmail.com</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- Image 2: profile.jpeg (larger circle) -->
+        <img src="images/profile.jpeg" alt="Gitau Wilson Njoroge profile" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Gitau+Wilson&size=140&background=1f4b66&color=fff&rounded=true';">
+      </div>
+    </section>
+
+    <!-- ABOUT section -->
+    <section id="about" class="section-card">
+      <div class="section-title"><i class="fas fa-user-shield"></i> About Me</div>
+      <div class="profile-summary">
+        <p>🔍 Experienced criminal investigator with over a decade of service in forensic investigation, criminal intelligence, and evidence analysis within the Directorate of Criminal Investigations (DCI). I combine meticulous crime scene management with strong analytical skills and courtroom presentation. Recently completed Emergency Medical Technician (EMT) training at Kenya Red Cross (2025) and continuously upgrading my expertise to strengthen emergency response and public safety. Passionate about community service and leveraging forensic science to uphold justice.</p>
+        <p style="margin-top:1rem;"><i class="fas fa-heart" style="color:#b22234;"></i> Dedicated to mentoring young officers and volunteering in community policing initiatives.</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE section -->
+    <section id="experience" class="section-card">
+      <div class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</div>
+      
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Crime Investigator</span>
+          <span class="exp-place">Directorate of Criminal Investigations (DCI)</span>
+          <span class="exp-date">May 2014 – Present</span>
+        </div>
+        <ul class="exp-bullets">
+          <li><i class="fas fa-angle-right"></i> Lead complex criminal investigations, prepare watertight case files and court exhibits.</li>
+          <li><i class="fas fa-angle-right"></i> Forensic evidence collection, preservation, and analysis; fingerprint identification using national AFIS.</li>
+          <li><i class="fas fa-angle-right"></i> Criminal intelligence analysis to dismantle networks; testify as expert witness in court.</li>
+          <li><i class="fas fa-angle-right"></i> Mentor junior investigators on crime scene protocols and evidence handling.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Police Officer</span>
+          <span class="exp-place">General Service Unit (GSU), National Police Service</span>
+          <span class="exp-date">Jan 2013 – Apr 2014</span>
+        </div>
+        <ul class="exp-bullets">
+          <li><i class="fas fa-angle-right"></i> Maintained public order during national security operations; supported rapid deployment tasks.</li>
+          <li><i class="fas fa-angle-right"></i> Assisted investigative teams with evidence handling and preliminary intelligence.</li>
+          <li><i class="fas fa-angle-right"></i> Engaged in community policing, building trust between citizens and police.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS section with third image (badge.jpeg) -->
+    <section id="credentials" class="section-card">
+      <div class="section-title"><i class="fas fa-diploma"></i> Education & Certifications</div>
+      
+      <h3 style="margin: 1rem 0 0.5rem; color:#1e4a66;"><i class="fas fa-graduation-cap" style="margin-right:0.5rem;"></i>Academic</h3>
+      <div class="cred-grid">
+        <div class="cred-item"><i class="fas fa-certificate"></i> BA (Hons) Security Mgt & Policing, Kenyatta Univ.</div>
+        <div class="cred-item"><i class="fas fa-certificate"></i> Diploma Counselling Psychology, KCA Univ.</div>
+        <div class="cred-item"><i class="fas fa-certificate"></i> Diploma Security Mgt & Policing, Kenya Police Training (GSU)</div>
+        <div class="cred-item"><i class="fas fa-certificate"></i> KCSE, Rungiri Secondary School</div>
+      </div>
+
+      <h3 style="margin: 2rem 0 0.5rem; color:#1e4a66;"><i class="fas fa-microscope" style="margin-right:0.5rem;"></i>Professional Training</h3>
+      <div class="cred-grid">
+        <div class="cred-item"><i class="fas fa-award"></i> Emergency Medical Technician (EMT) – Kenya Red Cross <span style="background:#dbeafe; padding:0.2rem 0.6rem; border-radius:20px; margin-left:0.5rem;">2025</span></div>
+        <div class="cred-item"><i class="fas fa-award"></i> Basic Crime Investigation – DCI Academy</div>
+        <div class="cred-item"><i class="fas fa-award"></i> Station Corporal Course – CID Training School</div>
+        <div class="cred-item"><i class="fas fa-award"></i> Forensic Fingerprint Specialist (A, B, C) – CID</div>
+        <div class="cred-item"><i class="fas fa-award"></i> Customer Care Certification – Skyways Institute</div>
+      </div>
+
+      <!-- Third image: badge.jpeg (placed as an emblem) -->
+      <div class="badge-image">
+        <img src="images/badge.jpeg" alt="Professional badge or emblem" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=EMT&size=80&background=2b6c8f&color=fff';">
+      </div>
+
+      <div class="training-badge">
+        <i class="fas fa-sync-alt fa-spin"></i> Currently undergoing advanced training in emergency response & public safety (2026).
+      </div>
+    </section>
+
+    <!-- SKILLS section (with languages/interests) -->
+    <section id="skills" class="section-card">
+      <div class="section-title"><i class="fas fa-cogs"></i> Core Skills</div>
+      <div class="skills-cloud">
+        <span class="skill-chip">Criminal Investigations</span>
+        <span class="skill-chip">Forensic Evidence Collection</span>
+        <span class="skill-chip">Crime Scene Management</span>
+        <span class="skill-chip">Fingerprint Identification</span>
+        <span class="skill-chip">Intelligence Analysis</span>
+        <span class="skill-chip">Courtroom Testimony</span>
+        <span class="skill-chip">Report Writing</span>
+        <span class="skill-chip">Emergency Medical Response</span>
+        <span class="skill-chip">Team Leadership</span>
+        <span class="skill-chip">Community Policing</span>
+        <span class="skill-chip">Crisis Intervention</span>
+      </div>
+
+      <div class="lang-interests" style="margin-top:2rem;">
+        <div class="info-box">
+          <h4><i class="fas fa-language"></i> Languages</h4>
+          <p><i class="fas fa-comment"></i> English – Fluent (written & spoken)</p>
+          <p><i class="fas fa-comment"></i> Swahili – Fluent (native)</p>
+        </div>
+        <div class="info-box">
+          <h4><i class="fas fa-heart"></i> Interests</h4>
+          <div>
+            <span class="interest-tag">✈️ Travelling</span>
+            <span class="interest-tag">⚽ Football</span>
+            <span class="interest-tag">🤝 Community Service</span>
+            <span class="interest-tag">🗣️ Social Engagement</span>
+            <span class="interest-tag">📚 Forensics reading</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT section with simple form -->
+    <section id="contact" class="section-card">
+      <div class="section-title"><i class="fas fa-address-card"></i> Contact & references</div>
+      
+      <div class="contact-flex">
+        <div class="contact-details">
+          <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +254 727 345148</p>
+          <p><i class="fas fa-envelope"></i> <strong>Email:</strong> wilsongitau100@gmail.com</p>
+          <p><i class="fas fa-map-marked-alt"></i> <strong>Location:</strong> Nairobi, Kenya (also available for remote collaboration)</p>
+          <div class="social-links" style="margin-top:1.5rem;">
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <!-- Fixed PDF link: now opens print dialog to save as PDF -->
+            <a href="#" onclick="window.print(); return false;"><i class="fas fa-file-pdf"></i> Save as PDF</a>
+          </div>
+          <p style="margin-top:1.8rem; background:#ecf3f8; padding:0.8rem 1.5rem; border-radius:40px;"><i class="fas fa-user-tie"></i> <strong>References:</strong> Available upon request.</p>
+        </div>
+
+        <div class="contact-form">
+          <h4 style="margin-bottom:1rem;">Send a quick message</h4>
+          <form action="#" method="post" onsubmit="alert('Message Send Successfully!'); return false;">
+            <div class="form-group">
+              <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email address" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your message ..."></textarea>
+            </div>
+            <button class="btn" type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>All rights reserved ©2026. Powered by GWN </p>
+  </footer>
+
+  <!-- JavaScript for active nav & smooth scroll (unchanged) -->
+  <script>
+    (function() {
+      const sections = document.querySelectorAll("section[id]");
+      const navItems = document.querySelectorAll(".nav-item");
+
+      function removeActiveClasses() {
+        navItems.forEach(item => item.classList.remove("active"));
+      }
+
+      function setActiveByScroll() {
+        let currentSectionId = "";
+        const scrollY = window.scrollY + 120;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute("id");
+          }
+        });
+
+        if (currentSectionId) {
+          removeActiveClasses();
+          const activeLink = document.querySelector(`.nav-item a[href="#${currentSectionId}"]`);
+          if (activeLink) activeLink.parentElement.classList.add("active");
+        } else {
+          removeActiveClasses();
+          document.querySelector('.nav-item a[href="#home"]').parentElement.classList.add("active");
+        }
+      }
+
+      navItems.forEach(item => {
+        const link = item.querySelector("a");
+        link.addEventListener("click", function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            window.scrollTo({
+              top: targetSection.offsetTop - 70,
+              behavior: "smooth"
+            });
+            removeActiveClasses();
+            this.parentElement.classList.add("active");
+          }
+        });
+      });
+
+      window.addEventListener("scroll", setActiveByScroll);
+      window.addEventListener("resize", setActiveByScroll);
+      window.addEventListener("load", function() {
+        setActiveByScroll();
+        if (window.location.hash) {
+          const id = window.location.hash.substring(1);
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              window.scrollTo({ top: el.offsetTop - 70, behavior: "smooth" });
+            }, 100);
+          }
+        }
+      });
+    })();
+  </script>
+  <!-- Instructions for images: 
+       
+       If files are missing, coloured placeholders will appear automatically. -->
+</body>
+</html>
